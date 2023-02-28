@@ -1,0 +1,22 @@
+<div class="topnav">
+  <%= link_to 'Home', root_path%>  /
+
+    <% if doer_signed_in? %>
+      <%= link_to 'Doer Profile',  doer_path(current_doer) %>  /
+      <%= link_to 'Log Out', destroy_doer_session_path, method: :delete %>  /
+      <%= link_to 'Edit Profile', edit_doer_path(current_doer) %>  /
+    <% elsif expert_signed_in? %>
+      <%= link_to 'Expert Profile',  expert_path(current_expert) %>  /
+      <%= link_to 'Log Out', destroy_expert_session_path, method: :delete %>  /
+      <%= link_to 'Edit Profile', edit_expert_path(current_expert) %>  /
+      <%= link_to 'Create New Regimen', new_regimen_path %>  /
+    
+    <% else %>
+      <%= link_to 'Expert Sign In', new_expert_session_path %>  /
+      <%= link_to 'Expert Sign Up', new_expert_registration_path %>  /
+      <%= link_to 'Doer Sign In', new_doer_session_path %>  /
+      <%= link_to 'Doer Sign Up', new_doer_registration_path %>  /
+          <% end %>
+  <%= link_to 'Categories', categories_path %>  /
+  <%= link_to 'Regimens', regimens_path %>  
+</div>

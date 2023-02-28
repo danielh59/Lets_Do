@@ -1,0 +1,13 @@
+<div class='show'>
+
+<%= image_tag(@regimen.img, size: "200")%>
+<br><br> 
+<%= @regimen.title %>
+<br><br>
+<%= @regimen.categories.name %>
+<br><br>
+Curated by:<%= @regimen.expert.name%>
+<br><br>
+<%= @regimen.description %>
+<br><br>
+</div>
