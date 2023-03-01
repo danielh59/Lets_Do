@@ -1,0 +1,33 @@
+<label>Our  Expert's Info:</label></br>
+<%= form_for(@expert) do |f| %>
+
+   <%= f.label :name %>
+   <br> 
+   <%= f.text_field :name %> 
+   <br>
+   <%= f.label :email %>: 
+   <br>
+   <%= f.text_field :email %> 
+   <br>
+   <br>
+   Your Profile Pic:</br>
+   <br>
+   Upload pic: <%= f.file_field :expert_img%>  
+   <br>
+   <br>
+ Find One From Web: <%= f.text_field :expert_img%> 
+ <br>
+ <br>
+ <%= f.label :password %>: 
+ <br>
+ <br>
+   <%= f.password_field(:password_digest) %>
+   <br>
+   <br>
+   <label>Something About This Expert: </label>
+   <br>
+   <br>
+    <%= f.text_area :bio %><br>
+  
+    <%= f.submit %>
+  <% end %>

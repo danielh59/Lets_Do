@@ -1,0 +1,32 @@
+
+<h2 class= 'title'> New Regimen </h2>
+<div class='body'>
+
+<%= form_for(@regimen, :url => regimens_new_path, :method => :post) do |f| %>
+
+  <%= f.label 'Picture Url:' %> <br>
+  <%= f.text_field :img %> 
+  <br>
+  <br>
+  <%= f.label :title %>: <br><br>
+ <%= f.text_field :title %>
+ <br><br>
+  <%= f.label "The Regimen" %>: <br><br>
+  <%= f.text_area :description, size: "25x10" %>
+  <br>
+
+  <%= f.hidden_field :expert_id, value: current_expert[:id]%> 
+  <%= f.label "Select Categories For Your Regimen:" %>
+<br>
+<%= f.collection_check_boxes :category_ids, Category.all, :id, :title %>
+<br> Or Create A New Category <br>
+<%= f.fields_for :categories, @regimen.categories_regimens.build do |categories_fields| %>
+  <%= categories_fields.text_field :title %> 
+  <% end %> 
+  <br>
+  <br>
+  <%= f.submit %>
+  
+  <% end %>
+  </div>
+  
