@@ -4,7 +4,7 @@ class Expert < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
-         has_many :categories
+        
          has_many :consultations
          has_many :doers, through: :consultations
          has_many :regimens
