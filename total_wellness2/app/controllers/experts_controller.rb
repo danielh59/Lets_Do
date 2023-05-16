@@ -1,6 +1,10 @@
 class ExpertsController < ApplicationController
   before_action :authenticate_expert!
   protect_from_forgery
+  
+  def expert_params    
+    params.require(:expert).permit(:name, :email, :password_digest, :bio, :expert_img)
+  end
 
   def index
     @experts = Expert.all
@@ -28,9 +32,7 @@ class ExpertsController < ApplicationController
 
   private
 
-  def expert_params    
-    params.require(:expert).permit(:name, :email, :password_digest, :bio, :expert_img)
-  end
+ 
 
 end
 end

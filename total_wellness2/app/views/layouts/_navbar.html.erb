@@ -1,8 +1,8 @@
-<div class="topnav">
-  <%= link_to 'Home', root_path%>  /
+<div id="navbar">
+ <%= link_to 'Home', root_path%> / 
 
     <% if doer_signed_in? %>
-      <%= link_to 'Doer Profile',  doer_path(current_doer) %>  /
+     <%= link_to 'Doer Profile',  doer_path(current_doer) %>  /
       <%= link_to 'Log Out', destroy_doer_session_path, method: :delete %>  /
       <%= link_to 'Edit Profile', edit_doer_path(current_doer) %>  /
     <% elsif expert_signed_in? %>
