@@ -3,18 +3,14 @@
   padding: 50px;
 }
 
-#navbar {
-  margin: 0px auto 0px auto;
 
-}
 #exercise_pic {
-width: 320px;
-height: 320px;
-
+  height: 320px;
+  object-fit: cover;
+  width: 100%;
 }
 body {
     background-color: #f7ffff;
-    margin: 20px;
 
 }
 
