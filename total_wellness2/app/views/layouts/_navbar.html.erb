@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm bg-dark justify-content-center navbar light">
-  <div class="container-fluid">
-<h1>   <%= link_to 'Home', root_path%> / 
+<nav class="navbar navbar-expand text-dark bg-secondary fixed-top">
+  <div class="container-fluid" style="font=Monaco" >
+   <%= link_to 'Home', root_path%> / 
 
     <% if doer_signed_in? %>
      <%= link_to 'Doer Profile',  doer_path(current_doer) %>  /
@@ -20,6 +20,8 @@
           <% end %>
   <%= link_to 'Categories', categories_path %>  /
   <%= link_to 'Regimens', regimens_path %>  
-  </h1>
+  <form role="search">
+  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
   </div>
 </nav>
