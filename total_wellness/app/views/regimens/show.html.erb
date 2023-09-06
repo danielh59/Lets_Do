@@ -1,6 +1,6 @@
 <div class='show'>
 
-<%= image_tag(@regimen.img, size: "200")%>
+<%= image_tag(@regimen.img, size: "200") if @regimen.img%>
 <br><br> 
 <%= @regimen.title %>
 <br><br>

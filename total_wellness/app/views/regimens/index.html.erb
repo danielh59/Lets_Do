@@ -6,7 +6,7 @@
 
 <% @regimens.each do |reg| %>
     <div class='regimens'>
-    <%= image_tag(reg.img, size: "200")%>
+    <%= image_tag(reg.img, size: "200") if reg.img%>
     <br>
     <h3> Category: <%= reg.title %> </h3>
     <h3> Regimen: <%= link_to reg.title, regimen_path(reg) %> </h3>

@@ -18,11 +18,7 @@
   <%= f.hidden_field :expert_id, value: current_expert[:id]%> 
   <%= f.label "Select Categories For Your Regimen:" %>
 <br>
-<%= f.collection_check_boxes :category_ids, Category.all, :id, :title %>
-<br> Or Create A New Category <br>
-<%= f.fields_for :categories, @regimen.categories_regimens.build do |categories_fields| %>
-  <%= categories_fields.text_field :title %> 
-  <% end %> 
+<%= f.collection_check_boxes :category_ids, Category.all, :id, :title %> 
   <br>
   <br>
   <%= f.submit %>
