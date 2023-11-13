@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_01_052425) do
+ActiveRecord::Schema[7.0].define(version: 2021_02_10_201416) do
   create_table "categories", force: :cascade do |t|
     t.string "title"
     t.integer "expert_id"
@@ -48,8 +48,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_052425) do
     t.datetime "remember_created_at", precision: nil
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "expert_img"
     t.string "user_img", default: "https://www.societegenerale.lu/uploads/tx_bisgbio/default-profile.png"
     t.text "bio"
     t.index ["email"], name: "index_experts_on_email", unique: true
@@ -63,7 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_052425) do
     t.integer "expert_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
   end
 
 end
