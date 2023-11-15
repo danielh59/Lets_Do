@@ -13,7 +13,6 @@
 ActiveRecord::Schema[7.0].define(version: 2021_02_10_201416) do
   create_table "categories", force: :cascade do |t|
     t.string "title"
-    t.integer "expert_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,6 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2021_02_10_201416) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user_img", default: "https://www.societegenerale.lu/uploads/tx_bisgbio/default-profile.png"
+    t.string "name", default: "Expert Joe Shmoe"
     t.text "bio"
     t.index ["email"], name: "index_experts_on_email", unique: true
     t.index ["reset_password_token"], name: "index_experts_on_reset_password_token", unique: true

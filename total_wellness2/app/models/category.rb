@@ -1,6 +1,5 @@
 class Category < ApplicationRecord
     has_and_belongs_to_many :regimens
-    # has_many :regimens, through: :categories_regimens
     validate :is_title_case
     before_validation :make_title_case
    
