@@ -1,27 +1,54 @@
-<nav class="navbar navbar-expand text-dark bg-secondary fixed-top">
-  <div class="container-fluid">
-   <%= link_to 'Home', root_path%> / 
-
+<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+   <%= link_to 'Home', root_path%> 
+     </li>
+     <li class="nav-item">
     <% if doer_signed_in? %>
-     <%= link_to 'Doer Profile',  doer_path(current_doer) %>  /
-      <%= link_to 'Log Out', destroy_doer_session_path, method: :delete %>  /
-      <%= link_to 'Edit Profile', edit_doer_path(current_doer) %>  /
+     </li>
+      <li class="nav-item">
+     <%= link_to 'Doer Profile',  doer_path(current_doer) %> 
+       </li>
+       <li class="nav-item"> 
+      <%= link_to 'Log Out', destroy_doer_session_path, method: :delete %>  
+       </li>
+        <li class="nav-item">
+      <%= link_to 'Edit Profile', edit_doer_path(current_doer) %> 
+       </li> 
+        <li class="nav-item">
     <% elsif expert_signed_in? %>
-      <%= link_to 'Expert Profile',  expert_path(current_expert) %>  /
-      <%= link_to 'Log Out', destroy_expert_session_path, method: :delete %>  /
-      <%= link_to 'Edit Profile', edit_expert_path(current_expert) %>  /
-      <%= link_to 'Create New Regimen', new_regimen_path %>  /
+      <%= link_to 'Expert Profile',  expert_path(current_expert) %>  
+       </li>
+        <li class="nav-item">
+      <%= link_to 'Log Out', destroy_expert_session_path, method: :delete %> 
+       </li> 
+        <li class="nav-item">
+      <%= link_to 'Edit Profile', edit_expert_path(current_expert) %>  
+       </li>
+        <li class="nav-item">
+      <%= link_to 'Create New Regimen', new_regimen_path %> 
+       </li> 
     
     <% else %>
-      <%= link_to 'Expert Sign In', new_expert_session_path %>  /
-      <%= link_to 'Expert Sign Up', new_expert_registration_path %>  /
-      <%= link_to 'Doer Sign In', new_doer_session_path %>  /
-      <%= link_to 'Doer Sign Up', new_doer_registration_path %>  /
+      <%= link_to 'Expert Sign In', new_expert_session_path %>  
+      <%= link_to 'Expert Sign Up', new_expert_registration_path %>  
+      <%= link_to 'Doer Sign In', new_doer_session_path %>  
+      <%= link_to 'Doer Sign Up', new_doer_registration_path %>  
           <% end %>
-  <%= link_to 'Categories', categories_path %>  /
+  <%= link_to 'Categories', categories_path %>  
   <%= link_to 'Regimens', regimens_path %>  
-  <form role="search">
-  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
-  </div>
-</nav>
+  
+
+  <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Centered nav only</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
